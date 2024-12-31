@@ -17,7 +17,7 @@ const S = {
     bottom: 2rem;
     right: 1rem;
     width: 200px;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     justify-content: flex-end;
   `
