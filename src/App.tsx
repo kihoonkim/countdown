@@ -20,6 +20,9 @@ const S = {
     height: 40vh;
     display: flex;
     justify-content: flex-end;
+    @media (max-width: 500px) {
+      width: 60%;
+    }
   `
 };
 function App() {
