@@ -57,15 +57,15 @@ function ChatInput({ name, onNameChanged, onEnter }: Props) {
     handleOnEnter()
   }
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim()
+    const value = e.target.value
     if(value) {
       setMsg(value);
     }
   }
   const handleOnEnter = () => {
-    if (!msg) return
+    if (!msg.trim()) return
 
-    onEnter(msg + '')
+    onEnter(msg.trim())
     setMsg('')
   }
   const handleOnFocus = () => {
