@@ -52,7 +52,8 @@ function ChatInput({ name, onNameChanged, onEnter }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== 'Enter' && !e.nativeEvent.isComposing) return
+    if (e.key !== 'Enter') return
+    if (e.nativeEvent.isComposing) return
     handleOnEnter()
   }
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
